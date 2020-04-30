@@ -27,6 +27,7 @@ void Render1(void)
         glVertex2f(.5, -.5);
     }
     glEnd();
+    
 }
 int hello(void) {
     GLFWwindow* win;
