@@ -16,6 +16,7 @@
 		8A2C95F7245A6B0600FF663E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2C95F6245A6B0600FF663E /* libglfw3.a */; };
 		8A2C95F9245A6B2700FF663E /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2C95F8245A6B2700FF663E /* libGLEW.a */; };
 		8A2C95FE245A72C000FF663E /* a001_HelloWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A2C95FC245A72C000FF663E /* a001_HelloWorld.cpp */; };
+		8A4309802462B59D002C8514 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A43097F2462B59D002C8514 /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		8A2C95FA245A722400FF663E /* GL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GL.entitlements; sourceTree = "<group>"; };
 		8A2C95FC245A72C000FF663E /* a001_HelloWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a001_HelloWorld.cpp; sourceTree = "<group>"; };
 		8A2C95FD245A72C000FF663E /* a001_HelloWorld.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a001_HelloWorld.hpp; sourceTree = "<group>"; };
+		8A43097F2462B59D002C8514 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		8A4309812462B69E002C8514 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		8A2C95E3245A686F00FF663E /* GL */ = {
 			isa = PBXGroup;
 			children = (
+				8A43097F2462B59D002C8514 /* glad.c */,
 				8A2C95FB245A728D00FF663E /* list */,
 				8A2C95FA245A722400FF663E /* GL.entitlements */,
 				8A2C95E4245A686F00FF663E /* main.cpp */,
@@ -93,6 +97,7 @@
 		8A2C95EB245A694200FF663E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A4309812462B69E002C8514 /* Foundation.framework */,
 				8A2C95F8245A6B2700FF663E /* libGLEW.a */,
 				8A2C95F6245A6B0600FF663E /* libglfw3.a */,
 				8A2C95F4245A699E00FF663E /* GLUT.framework */,
@@ -172,6 +177,7 @@
 			files = (
 				8A2C95E5245A686F00FF663E /* main.cpp in Sources */,
 				8A2C95FE245A72C000FF663E /* a001_HelloWorld.cpp in Sources */,
+				8A4309802462B59D002C8514 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,10 +301,16 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = B9WZ3CWF75;
 				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/GLFW,
+					/usr/local/include/glad,
+					/usr/local/include/KHR,
+				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				USER_HEADER_SEARCH_PATHS = /usr/local/include;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -310,10 +322,16 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = B9WZ3CWF75;
 				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/GLFW,
+					/usr/local/include/glad,
+					/usr/local/include/KHR,
+				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				USER_HEADER_SEARCH_PATHS = /usr/local/include;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
