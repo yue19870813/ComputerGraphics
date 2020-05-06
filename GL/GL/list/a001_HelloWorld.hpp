@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-int hello();
+int a001_hello();
 
 #endif /* a001_HelloWorld_hpp */
