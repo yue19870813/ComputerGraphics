@@ -1,12 +1,12 @@
 //
-//  main.cpp
+//  a002_HelloTriangle.cpp
 //  GL
 //
-//  Created by yuebinbin on 2020/4/30.
+//  Created by yuebinbin on 2020/5/6.
 //  Copyright © 2020 yuebinbin. All rights reserved.
 //
 
-// System Headers
+#include "a002_HelloTriangle.hpp"
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
@@ -16,8 +16,8 @@
 #include <iostream>
 #include "a000_common.hpp"
 
-int a001_hello() {
-
+int a002_hello_triangle() {
+    
     //初始化GLFW
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -58,4 +58,3 @@ int a001_hello() {
     glfwTerminate();
     return EXIT_SUCCESS;
 }
-

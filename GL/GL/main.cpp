@@ -8,9 +8,12 @@
 
 // System Headers
 #include "a001_HelloWorld.hpp"
+#include "a002_HelloTriangle.hpp"
 
 int main(int argc, char * argv[]) {
     // 001 hello world
-    return a001_hello();
+//    return a001_hello();
+    
+    return a002_hello_triangle();
 }
 
