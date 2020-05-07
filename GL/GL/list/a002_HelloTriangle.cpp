@@ -157,12 +157,14 @@ int a002_hello_triangle() {
 int a002_twoTriangle() {
     // 初始化GLFW
     glfwInit();
-    glfwInitHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwInitHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwInitHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwInitHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // just in MacOS
-    // 创建window
-    GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Two Triangles", NULL, NULL);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // uncomment this statement to fix compilation on OS X
+#endif
+    // 创建一个窗口对象
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "FirstGL", NULL, NULL);
     if (window == NULL) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -177,6 +179,7 @@ int a002_twoTriangle() {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
+
     // 构建和编译着色器（顶点着色器和片段着色器）
     int vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
