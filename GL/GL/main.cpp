@@ -17,7 +17,9 @@ int main(int argc, char * argv[]) {
     // 002 第一个三角形
 //    return a002_hello_triangle();
     // 002 练习题 两个三角形
-    return a002_twoTriangle();
+//    return a002_twoTriangle();
+    // 002 练习题 两个三角形 两组顶点数据
+    return a002_twoTriangleByTwoData();
     // 003 第一个矩形
 //    return a003_HelloRect();
 }
