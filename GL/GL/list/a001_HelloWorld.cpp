@@ -6,14 +6,6 @@
 //  Copyright © 2020 yuebinbin. All rights reserved.
 //
 
-// System Headers
-#include "glad/glad.h"
-#include "GLFW/glfw3.h"
-
-// Standard Headers
-#include <cstdio>
-#include <cstdlib>
-#include <iostream>
 #include "a000_common.hpp"
 
 int a001_hello() {

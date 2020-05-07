@@ -9,8 +9,13 @@
 #ifndef a000_common_hpp
 #define a000_common_hpp
 
+#include "glad/glad.h"
 #include "GLFW/glfw3.h"
 #include <stdio.h>
+// Standard Headers
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;

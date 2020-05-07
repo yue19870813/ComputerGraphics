@@ -13,7 +13,7 @@
 int main(int argc, char * argv[]) {
     // 001 hello world
 //    return a001_hello();
-    
+    // 002 第一个三角形
     return a002_hello_triangle();
 }
 

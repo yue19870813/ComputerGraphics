@@ -7,13 +7,6 @@
 //
 
 #include "a002_HelloTriangle.hpp"
-#include "glad/glad.h"
-#include "GLFW/glfw3.h"
-
-// Standard Headers
-#include <cstdio>
-#include <cstdlib>
-#include <iostream>
 #include "a000_common.hpp"
 
 const char *vertexShaderSource = "#version 330 core\n"
