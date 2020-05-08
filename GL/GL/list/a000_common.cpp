@@ -21,6 +21,33 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 }
 
 
+GLFWwindow* GLFW::init() {
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    
+    GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "a004_shaderWithUniform", NULL, NULL);
+    if (window == NULL) {
+        std::cout << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        return nullptr;
+    }
+    // 设置上下文
+    glfwMakeContextCurrent(window);
+    // 对窗口注册一个回调函数，每当窗口改变大小，GLFW会调用这个函数并填充相应的参数供你处理
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    // 初始化GLAD用来管理OpenGL的函数指针
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cout << "glad init fail!" << std::endl;
+        glfwTerminate();
+        return nullptr;
+    }
+    return window;
+}
+
+
 Shader::Shader(const GLchar* vertexStr, const GLchar* fragmentStr) {
     // 2. compile shaders
     unsigned int vertex, fragment;

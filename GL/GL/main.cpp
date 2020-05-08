@@ -30,6 +30,12 @@ int main(int argc, char * argv[]) {
     // 004 在着色器中使用uniform
 //    return a004_shaderWithUniform();
     // 004 尝试顶点数据中加入颜色值
-    return a004_shaderMoreAttrib();
+//    return a004_shaderMoreAttrib();
+    // 004 修改顶点着色器让三角形上下颠倒
+//    return a004_changeDownTriangle();
+    // 004 把三角形移动到屏幕右侧
+//    return a004_moveTriangle();
+    // 004 测试用顶点位置插值设置顶点颜色
+    return a004_testShader();
 }
 

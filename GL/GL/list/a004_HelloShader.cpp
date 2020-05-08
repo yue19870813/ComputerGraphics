@@ -417,3 +417,226 @@ int a004_shaderMoreAttrib() {
     glfwTerminate();
     return EXIT_SUCCESS;
 }
+
+
+// ----------------------------
+// 练习题：
+// 1. 修改顶点着色器让三角形上下颠倒
+const char *vertexShader004DownSource = "#version 330 core\n"
+    "layout (location = 0) in vec3 aPos;\n"
+    "layout (location = 1) in vec3 aColor;\n"
+    "out vec3 myColor;\n"
+    "void main()\n"
+    "{\n"
+    "   gl_Position = vec4(aPos.x, -aPos.y, aPos.z, 1.0);\n"
+    "   myColor = aColor;\n"
+    "}\0";
+
+const char *fragmentShader004DownSource = "#version 330 core\n"
+    "out vec4 FragColor;\n"
+    "in vec3 myColor;\n"
+    "void main()\n"
+    "{\n"
+    "   FragColor = vec4(myColor, 1.0);\n"
+    "}\n\0";
+
+int a004_changeDownTriangle() {
+    // 初始化
+    GLFW glfw;
+    GLFWwindow *window = glfw.init();
+    // 处理着色器
+    Shader ourShader(vertexShader004DownSource, fragmentShader004DownSource);
+    
+    // 顶点数据
+    float vertices[] = {
+        // 位置              // 颜色
+         0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // 右下
+        -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // 左下
+         0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // 顶部
+    };
+    
+    // 绑定顶点数据
+    unsigned int VAO, VBO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    // 设置顶点属性
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+    
+    //渲染循环
+    while (!glfwWindowShouldClose(window)) {
+        // 输入
+        processInput(window);
+        // 渲染指令
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        // draw our first triangle
+        ourShader.use();
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        // 检查并调用事件，交换缓冲
+        glfwSwapBuffers(window);    //交换颜色缓冲
+        glfwPollEvents();           //检查触发事件
+    }
+    //释放/删除之前的分配的所有资源
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+    
+    glfwTerminate();
+    return EXIT_SUCCESS;
+}
+
+// 2. 使用uniform定义一个水平偏移量，在顶点着色器中使用这个偏移量把三角形移动到屏幕右侧
+const char *vertexShader004MoveSource = "#version 330 core\n"
+    "layout (location = 0) in vec3 aPos;\n"
+    "layout (location = 1) in vec3 aColor;\n"
+    "out vec3 myColor;\n"
+    "uniform float offset;\n"
+    "void main()\n"
+    "{\n"
+    "   gl_Position = vec4(aPos.x + offset, aPos.y, aPos.z, 1.0);\n"
+    "   myColor = aColor;\n"
+    "}\0";
+
+const char *fragmentShader004MoveSource = "#version 330 core\n"
+    "out vec4 FragColor;\n"
+    "in vec3 myColor;\n"
+    "void main()\n"
+    "{\n"
+    "   FragColor = vec4(myColor, 1.0);\n"
+    "}\n\0";
+
+int a004_moveTriangle() {
+    GLFW glfw;
+    GLFWwindow *window = glfw.init();
+    // 处理着色器
+    Shader shader(vertexShader004MoveSource, fragmentShader004MoveSource);
+    
+    // 顶点数据
+    float vertices[] = {
+        // 位置              // 颜色
+         0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // 右下
+        -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // 左下
+         0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // 顶部
+    };
+    
+    // 绑定顶点数据
+    unsigned int VAO, VBO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    // 设置顶点属性
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+    
+    float offset = 0.0f;
+    //渲染循环
+    while (!glfwWindowShouldClose(window)) {
+        // 输入
+        processInput(window);
+        // 渲染指令
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        // draw our first triangle
+        shader.use();
+        shader.setFloat("offset", offset);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        // 检查并调用事件，交换缓冲
+        glfwSwapBuffers(window);    //交换颜色缓冲
+        glfwPollEvents();           //检查触发事件
+        if (offset < 1.0) {
+            offset = offset + 0.001;
+        }
+    }
+    //释放/删除之前的分配的所有资源
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+    
+    glfwTerminate();
+    return EXIT_SUCCESS;
+}
+
+
+// 3. 使用out关键字把顶点位置输出到片段着色器，并将片段的颜色设置为与顶点位置相等（来看看连顶点位置值都在三角形中被插值的结果）。
+//    做完这些后，尝试回答下面的问题：为什么在三角形的左下角是黑的?
+//    回答：因为左下角坐标是负值，颜色范围是0～1，小于0的会被设置成0，所以一直为黑色，知道插值变为正值。
+const char *vertexShader004TestSource = "#version 330 core\n"
+    "layout (location = 0) in vec3 aPos;\n"
+    "out vec4 vertexColor;\n"
+    "void main()\n"
+    "{\n"
+    "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+    "   vertexColor = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+    "}\0";
+
+const char *fragmentShader004TestSource = "#version 330 core\n"
+    "in vec4 vertexColor;\n"
+    "out vec4 FragColor;\n"
+    "void main()\n"
+    "{\n"
+    "   FragColor = vertexColor;\n"
+    "}\n\0";
+
+int a004_testShader() {
+    GLFW glfw;
+    GLFWwindow *window = glfw.init();
+    
+    Shader myShader(vertexShader004TestSource, fragmentShader004TestSource);
+ 
+    float vertices[] = {
+        -0.5f, -0.5f, 0.0f, // left
+         0.5f, -0.5f, 0.0f, // right
+         0.0f,  0.5f, 0.0f  // top
+    };
+
+    unsigned int VBO, VAO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+    glBindVertexArray(VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+    
+    
+    //渲染循环
+    while (!glfwWindowShouldClose(window)) {
+        // 输入
+        processInput(window);
+        // 渲染指令
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        
+        // draw our first triangle
+        myShader.use();
+        glBindVertexArray(VAO);        glDrawArrays(GL_TRIANGLES, 0, 3);
+        
+        // 检查并调用事件，交换缓冲
+        glfwSwapBuffers(window);    //交换颜色缓冲
+        glfwPollEvents();           //检查触发事件
+    }
+    //释放/删除之前的分配的所有资源    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+
+    glfwTerminate();
+    return EXIT_SUCCESS;
+}

@@ -25,9 +25,13 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);//回�
 void processInput(GLFWwindow *window);
 
 
+class GLFW {
+public:
+    GLFWwindow* init();
+};
+
 // 着色器通用类
-class Shader
-{
+class Shader {
 public:
     // 程序ID
     unsigned int ID;
