@@ -28,6 +28,8 @@ int main(int argc, char * argv[]) {
     // 004 第一个着色器
 //    return a004_helloShader();
     // 004 在着色器中使用uniform
-    return a004_shaderWithUniform();
+//    return a004_shaderWithUniform();
+    // 004 尝试顶点数据中加入颜色值
+    return a004_shaderMoreAttrib();
 }
 
