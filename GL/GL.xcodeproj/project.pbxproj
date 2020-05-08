@@ -20,6 +20,7 @@
 		8A4309852462D8FD002C8514 /* a002_HelloTriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309832462D8FD002C8514 /* a002_HelloTriangle.cpp */; };
 		8A4309882462DA28002C8514 /* a000_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309862462DA28002C8514 /* a000_common.cpp */; };
 		8A43098B2463F168002C8514 /* a003_HelloRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309892463F168002C8514 /* a003_HelloRect.cpp */; };
+		8A43098E246535D8002C8514 /* a004_HelloShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43098C246535D8002C8514 /* a004_HelloShader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,8 @@
 		8A4309872462DA28002C8514 /* a000_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a000_common.hpp; sourceTree = "<group>"; };
 		8A4309892463F168002C8514 /* a003_HelloRect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a003_HelloRect.cpp; sourceTree = "<group>"; };
 		8A43098A2463F168002C8514 /* a003_HelloRect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a003_HelloRect.hpp; sourceTree = "<group>"; };
+		8A43098C246535D8002C8514 /* a004_HelloShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a004_HelloShader.cpp; sourceTree = "<group>"; };
+		8A43098D246535D8002C8514 /* a004_HelloShader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a004_HelloShader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				8A4309842462D8FD002C8514 /* a002_HelloTriangle.hpp */,
 				8A4309892463F168002C8514 /* a003_HelloRect.cpp */,
 				8A43098A2463F168002C8514 /* a003_HelloRect.hpp */,
+				8A43098C246535D8002C8514 /* a004_HelloShader.cpp */,
+				8A43098D246535D8002C8514 /* a004_HelloShader.hpp */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				8A4309802462B59D002C8514 /* glad.c in Sources */,
 				8A4309882462DA28002C8514 /* a000_common.cpp in Sources */,
 				8A43098B2463F168002C8514 /* a003_HelloRect.cpp in Sources */,
+				8A43098E246535D8002C8514 /* a004_HelloShader.cpp in Sources */,
 				8A4309852462D8FD002C8514 /* a002_HelloTriangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
