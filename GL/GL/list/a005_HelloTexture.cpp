@@ -86,7 +86,7 @@ int a005_HelloTexture() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     // load image, create texture and generate mipmaps
     int width, height, nrChannels;
-    char const *ppp = FileSystem::getPath("container.jpg").c_str();
+//    char const *ppp = FileSystem::getPath("container.jpg").c_str();
 //    std::cout << "===" << ppp << std::endl;
     unsigned char *data = stbi_load(FileSystem::getPath("resource/texture/container.jpg").c_str(), &width, &height, &nrChannels, 0);
     if (data) {

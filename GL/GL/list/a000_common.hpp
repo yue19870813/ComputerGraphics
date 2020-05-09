@@ -9,14 +9,16 @@
 #ifndef a000_common_hpp
 #define a000_common_hpp
 
-#include "glad/glad.h"
-#include "GLFW/glfw3.h"
-#include <stdio.h>
 // Standard Headers
+#include <stdio.h>
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
+// OpenGL headers
+#include "glad/glad.h"
+#include "GLFW/glfw3.h"
+//#include "filesystem.h"
 
 // settings
 const unsigned int SCR_WIDTH = 800;
