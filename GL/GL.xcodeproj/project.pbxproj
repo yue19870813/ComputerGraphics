@@ -64,6 +64,9 @@
 		8A43099124657EB6002C8514 /* a005_HelloTexture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a005_HelloTexture.hpp; sourceTree = "<group>"; };
 		8A43099324664C4D002C8514 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		8A43099424664D2D002C8514 /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		8A43099724668DF6002C8514 /* filesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
+		8A4309982466986A002C8514 /* root_directory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = root_directory.h; sourceTree = "<group>"; };
+		8A43099A24669CDE002C8514 /* resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resource; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +109,10 @@
 			children = (
 				8A43099324664C4D002C8514 /* stb_image.h */,
 				8A43099424664D2D002C8514 /* stb_image.cpp */,
+				8A43099724668DF6002C8514 /* filesystem.h */,
+				8A4309982466986A002C8514 /* root_directory.h */,
 				8A43097F2462B59D002C8514 /* glad.c */,
+				8A43099A24669CDE002C8514 /* resource */,
 				8A2C95FB245A728D00FF663E /* list */,
 				8A2C95FA245A722400FF663E /* GL.entitlements */,
 				8A2C95E4245A686F00FF663E /* main.cpp */,

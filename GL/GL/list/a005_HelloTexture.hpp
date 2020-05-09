@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+int a005_HelloTexture();
+
 #endif /* a005_HelloTexture_hpp */

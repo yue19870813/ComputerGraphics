@@ -11,6 +11,7 @@
 #include "a002_HelloTriangle.hpp"
 #include "a003_HelloRect.hpp"
 #include "a004_HelloShader.hpp"
+#include "a005_HelloTexture.hpp"
 
 int main(int argc, char * argv[]) {
     // 001 hello world
@@ -36,6 +37,8 @@ int main(int argc, char * argv[]) {
     // 004 把三角形移动到屏幕右侧
 //    return a004_moveTriangle();
     // 004 测试用顶点位置插值设置顶点颜色
-    return a004_testShader();
+//    return a004_testShader();
+    // 005 显示纹理
+    return a005_HelloTexture();
 }
 
