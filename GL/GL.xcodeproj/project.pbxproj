@@ -21,6 +21,8 @@
 		8A4309882462DA28002C8514 /* a000_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309862462DA28002C8514 /* a000_common.cpp */; };
 		8A43098B2463F168002C8514 /* a003_HelloRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309892463F168002C8514 /* a003_HelloRect.cpp */; };
 		8A43098E246535D8002C8514 /* a004_HelloShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43098C246535D8002C8514 /* a004_HelloShader.cpp */; };
+		8A43099224657EB6002C8514 /* a005_HelloTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43099024657EB6002C8514 /* a005_HelloTexture.cpp */; };
+		8A43099624664D2D002C8514 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43099424664D2D002C8514 /* stb_image.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +60,10 @@
 		8A43098A2463F168002C8514 /* a003_HelloRect.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a003_HelloRect.hpp; sourceTree = "<group>"; };
 		8A43098C246535D8002C8514 /* a004_HelloShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a004_HelloShader.cpp; sourceTree = "<group>"; };
 		8A43098D246535D8002C8514 /* a004_HelloShader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a004_HelloShader.hpp; sourceTree = "<group>"; };
+		8A43099024657EB6002C8514 /* a005_HelloTexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a005_HelloTexture.cpp; sourceTree = "<group>"; };
+		8A43099124657EB6002C8514 /* a005_HelloTexture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a005_HelloTexture.hpp; sourceTree = "<group>"; };
+		8A43099324664C4D002C8514 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		8A43099424664D2D002C8514 /* stb_image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 		8A2C95E3245A686F00FF663E /* GL */ = {
 			isa = PBXGroup;
 			children = (
+				8A43099324664C4D002C8514 /* stb_image.h */,
+				8A43099424664D2D002C8514 /* stb_image.cpp */,
 				8A43097F2462B59D002C8514 /* glad.c */,
 				8A2C95FB245A728D00FF663E /* list */,
 				8A2C95FA245A722400FF663E /* GL.entitlements */,
@@ -134,6 +142,8 @@
 				8A43098A2463F168002C8514 /* a003_HelloRect.hpp */,
 				8A43098C246535D8002C8514 /* a004_HelloShader.cpp */,
 				8A43098D246535D8002C8514 /* a004_HelloShader.hpp */,
+				8A43099024657EB6002C8514 /* a005_HelloTexture.cpp */,
+				8A43099124657EB6002C8514 /* a005_HelloTexture.hpp */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -195,11 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A43099224657EB6002C8514 /* a005_HelloTexture.cpp in Sources */,
 				8A2C95E5245A686F00FF663E /* main.cpp in Sources */,
 				8A2C95FE245A72C000FF663E /* a001_HelloWorld.cpp in Sources */,
 				8A4309802462B59D002C8514 /* glad.c in Sources */,
 				8A4309882462DA28002C8514 /* a000_common.cpp in Sources */,
 				8A43098B2463F168002C8514 /* a003_HelloRect.cpp in Sources */,
+				8A43099624664D2D002C8514 /* stb_image.cpp in Sources */,
 				8A43098E246535D8002C8514 /* a004_HelloShader.cpp in Sources */,
 				8A4309852462D8FD002C8514 /* a002_HelloTriangle.cpp in Sources */,
 			);
