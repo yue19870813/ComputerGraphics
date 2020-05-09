@@ -39,6 +39,16 @@ int main(int argc, char * argv[]) {
     // 004 测试用顶点位置插值设置顶点颜色
 //    return a004_testShader();
     // 005 显示纹理
-    return a005_HelloTexture();
+//    return a005_HelloTexture();
+    // 005 纹理融合
+//    return a005_MixTexture();
+    // 005 纹理翻转
+//    return a005_flipTexture();
+    // 005 平铺4个纹理
+//    return a005_wrappingTexture();
+    // 005 调整纹理范围和纹理过滤
+//    return a005_filterTexture();
+    // 005 隐藏和显示纹理
+    return a005_hideTexture();
 }
 
