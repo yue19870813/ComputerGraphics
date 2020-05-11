@@ -8,8 +8,7 @@
 
 #include "a005_HelloTexture.hpp"
 #include "a000_common.hpp"
-#include "stb_image.h"
-#include "filesystem.h"
+//#include "filesystem.h"
 
 const char *vertexShader005Source = "#version 330 core\n"
     "layout (location = 0) in vec3 aPos;\n"

@@ -12,6 +12,7 @@
 #include "a003_HelloRect.hpp"
 #include "a004_HelloShader.hpp"
 #include "a005_HelloTexture.hpp"
+#include "a006_HelloTransform.hpp"
 
 int main(int argc, char * argv[]) {
     // 001 hello world
@@ -49,6 +50,8 @@ int main(int argc, char * argv[]) {
     // 005 调整纹理范围和纹理过滤
 //    return a005_filterTexture();
     // 005 隐藏和显示纹理
-    return a005_hideTexture();
+//    return a005_hideTexture();
+    // 006 矩阵变换
+    return a006_helloTransform();
 }
 
