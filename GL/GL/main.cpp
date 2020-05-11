@@ -52,6 +52,10 @@ int main(int argc, char * argv[]) {
     // 005 隐藏和显示纹理
 //    return a005_hideTexture();
     // 006 矩阵变换
-    return a006_helloTransform();
+//    return a006_helloTransform();
+    // 006 矩阵变换先旋转再位移
+//    return a006_rotationAndMove();
+    // 006 画两个箱子
+    return a006_draw2Box();
 }
 
