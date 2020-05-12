@@ -13,6 +13,7 @@
 #include "a004_HelloShader.hpp"
 #include "a005_HelloTexture.hpp"
 #include "a006_HelloTransform.hpp"
+#include "a007_HelloCoordinate.hpp"
 
 int main(int argc, char * argv[]) {
     // 001 hello world
@@ -56,6 +57,8 @@ int main(int argc, char * argv[]) {
     // 006 矩阵变换先旋转再位移
 //    return a006_rotationAndMove();
     // 006 画两个箱子
-    return a006_draw2Box();
+//    return a006_draw2Box();
+    // 007 坐标系统
+    return a007_helloCoordinate();
 }
 

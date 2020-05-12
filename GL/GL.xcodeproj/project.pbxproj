@@ -24,6 +24,7 @@
 		8A43099224657EB6002C8514 /* a005_HelloTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43099024657EB6002C8514 /* a005_HelloTexture.cpp */; };
 		8A43099624664D2D002C8514 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43099424664D2D002C8514 /* stb_image.cpp */; };
 		8A43099D24694E3D002C8514 /* a006_HelloTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43099B24694E3D002C8514 /* a006_HelloTransform.cpp */; };
+		8A4309A0246A886A002C8514 /* a007_HelloCoordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43099E246A886A002C8514 /* a007_HelloCoordinate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,8 @@
 		8A43099A24669CDE002C8514 /* resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resource; sourceTree = "<group>"; };
 		8A43099B24694E3D002C8514 /* a006_HelloTransform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a006_HelloTransform.cpp; sourceTree = "<group>"; };
 		8A43099C24694E3D002C8514 /* a006_HelloTransform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a006_HelloTransform.hpp; sourceTree = "<group>"; };
+		8A43099E246A886A002C8514 /* a007_HelloCoordinate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a007_HelloCoordinate.cpp; sourceTree = "<group>"; };
+		8A43099F246A886A002C8514 /* a007_HelloCoordinate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a007_HelloCoordinate.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				8A43099124657EB6002C8514 /* a005_HelloTexture.hpp */,
 				8A43099B24694E3D002C8514 /* a006_HelloTransform.cpp */,
 				8A43099C24694E3D002C8514 /* a006_HelloTransform.hpp */,
+				8A43099E246A886A002C8514 /* a007_HelloCoordinate.cpp */,
+				8A43099F246A886A002C8514 /* a007_HelloCoordinate.hpp */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4309A0246A886A002C8514 /* a007_HelloCoordinate.cpp in Sources */,
 				8A43099224657EB6002C8514 /* a005_HelloTexture.cpp in Sources */,
 				8A2C95E5245A686F00FF663E /* main.cpp in Sources */,
 				8A2C95FE245A72C000FF663E /* a001_HelloWorld.cpp in Sources */,
