@@ -59,6 +59,14 @@ int main(int argc, char * argv[]) {
     // 006 画两个箱子
 //    return a006_draw2Box();
     // 007 坐标系统
-    return a007_helloCoordinate();
+//    return a007_helloCoordinate();
+    // 007 3D物体旋转
+//    return a007_more3D();
+    // 007 测试projection透视逻辑
+//    return a007_testProjection();
+    // 007 测试观察矩阵位移情况
+//    return a007_moveMat();
+    // 007 旋转指定的箱子
+    return a007_rotationWith3();
 }
 
