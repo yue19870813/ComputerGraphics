@@ -6,7 +6,7 @@
 //  Copyright © 2020 yuebinbin. All rights reserved.
 //
 
-#include "a000_common.hpp"
+#include "common.hpp"
 
 int a001_hello() {
 

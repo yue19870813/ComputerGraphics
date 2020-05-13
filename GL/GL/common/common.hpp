@@ -1,13 +1,13 @@
 //
-//  a000_common.hpp
+//  common.hpp
 //  GL
 //
-//  Created by yuebinbin on 2020/5/6.
+//  Created by yuebinbin on 2020/5/13.
 //  Copyright © 2020 yuebinbin. All rights reserved.
 //
 
-#ifndef a000_common_hpp
-#define a000_common_hpp
+#ifndef common_hpp
+#define common_hpp
 
 // Standard Headers
 #include <stdio.h>
@@ -56,4 +56,4 @@ private:
     void checkCompileErrors(unsigned int shader, std::string type);
 };
 
-#endif /* a000_common_hpp */
+#endif /* common_hpp */

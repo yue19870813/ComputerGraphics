@@ -7,7 +7,7 @@
 //
 
 #include "a007_HelloCoordinate.hpp"
-#include "a000_common.hpp"
+#include "common.hpp"
 
 const char *vertexShader007Source = "#version 330 core\n"
     "layout (location = 0) in vec3 aPos;\n"

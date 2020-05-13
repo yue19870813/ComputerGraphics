@@ -1,13 +1,12 @@
 //
-//  a000_common.cpp
+//  common.cpp
 //  GL
 //
-//  Created by yuebinbin on 2020/5/6.
+//  Created by yuebinbin on 2020/5/13.
 //  Copyright © 2020 yuebinbin. All rights reserved.
 //
 
-#include "a000_common.hpp"
-
+#include "common.hpp"
 //输入控制，检查用户是否按下了返回键(Esc)
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)

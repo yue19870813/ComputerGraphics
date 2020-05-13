@@ -7,7 +7,7 @@
 //
 
 #include "a006_HelloTransform.hpp"
-#include "a000_common.hpp"
+#include "common.hpp"
 
 const char *vertexShader006Source = "#version 330 core\n"
     "layout (location = 0) in vec3 aPos;\n"

@@ -7,7 +7,7 @@
 //
 
 #include "a002_HelloTriangle.hpp"
-#include "a000_common.hpp"
+#include "common.hpp"
 
 /**
  * 顶点着色器中要求输入一个vec3类型数据，对其命名没有特殊要求。
