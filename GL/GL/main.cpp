@@ -6,7 +6,7 @@
 //  Copyright © 2020 yuebinbin. All rights reserved.
 //
 
-// System Headers
+// a. 入门教程
 #include "a001_HelloWorld.hpp"
 #include "a002_HelloTriangle.hpp"
 #include "a003_HelloRect.hpp"
@@ -14,8 +14,17 @@
 #include "a005_HelloTexture.hpp"
 #include "a006_HelloTransform.hpp"
 #include "a007_HelloCoordinate.hpp"
+#include "a008_HelloCamera.hpp"
+
+// b. 光照系统
+#include "b001_HelloLight.hpp"
 
 int main(int argc, char * argv[]) {
+    
+    // --------------------------------------------------------------
+    //                            入门教程
+    // --------------------------------------------------------------
+    
     // 001 hello world
 //    return a001_hello();
     // 002 第一个三角形
@@ -67,6 +76,18 @@ int main(int argc, char * argv[]) {
     // 007 测试观察矩阵位移情况
 //    return a007_moveMat();
     // 007 旋转指定的箱子
-    return a007_rotationWith3();
+//    return a007_rotationWith3();
+    // 008 摄像机
+//    return a008_helloCamera();
+    // 008 超级摄像机
+//    return a008_superCamera();
+    
+    
+    // --------------------------------------------------------------
+    //                            光照系统
+    // --------------------------------------------------------------
+    
+    // 001 第一个光源
+    return b001_helloLight();
 }
 

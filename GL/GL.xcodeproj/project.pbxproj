@@ -26,6 +26,8 @@
 		8A4309A0246A886A002C8514 /* a007_HelloCoordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A43099E246A886A002C8514 /* a007_HelloCoordinate.cpp */; };
 		8A4309A3246BE15E002C8514 /* a008_HelloCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309A1246BE15D002C8514 /* a008_HelloCamera.cpp */; };
 		8A4309AA246BE1F4002C8514 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309A8246BE1F4002C8514 /* common.cpp */; };
+		8A4309AC246C182A002C8514 /* camera.h in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309AB246C182A002C8514 /* camera.h */; };
+		8A4309B0246D67F7002C8514 /* b001_HelloLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309AE246D67F7002C8514 /* b001_HelloLight.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +77,9 @@
 		8A4309A2246BE15D002C8514 /* a008_HelloCamera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = a008_HelloCamera.hpp; sourceTree = "<group>"; };
 		8A4309A8246BE1F4002C8514 /* common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
 		8A4309A9246BE1F4002C8514 /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
+		8A4309AB246C182A002C8514 /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
+		8A4309AE246D67F7002C8514 /* b001_HelloLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = b001_HelloLight.cpp; sourceTree = "<group>"; };
+		8A4309AF246D67F7002C8514 /* b001_HelloLight.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = b001_HelloLight.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,7 @@
 				8A43099A24669CDE002C8514 /* resource */,
 				8A4309A5246BE17D002C8514 /* common */,
 				8A2C95FB245A728D00FF663E /* list */,
+				8A4309AD246D67B8002C8514 /* light */,
 				8A2C95FA245A722400FF663E /* GL.entitlements */,
 				8A2C95E4245A686F00FF663E /* main.cpp */,
 			);
@@ -171,8 +177,18 @@
 			children = (
 				8A4309A8246BE1F4002C8514 /* common.cpp */,
 				8A4309A9246BE1F4002C8514 /* common.hpp */,
+				8A4309AB246C182A002C8514 /* camera.h */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		8A4309AD246D67B8002C8514 /* light */ = {
+			isa = PBXGroup;
+			children = (
+				8A4309AE246D67F7002C8514 /* b001_HelloLight.cpp */,
+				8A4309AF246D67F7002C8514 /* b001_HelloLight.hpp */,
+			);
+			path = light;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +248,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4309AC246C182A002C8514 /* camera.h in Sources */,
 				8A4309AA246BE1F4002C8514 /* common.cpp in Sources */,
 				8A4309A0246A886A002C8514 /* a007_HelloCoordinate.cpp in Sources */,
 				8A43099224657EB6002C8514 /* a005_HelloTexture.cpp in Sources */,
+				8A4309B0246D67F7002C8514 /* b001_HelloLight.cpp in Sources */,
 				8A2C95E5245A686F00FF663E /* main.cpp in Sources */,
 				8A2C95FE245A72C000FF663E /* a001_HelloWorld.cpp in Sources */,
 				8A4309802462B59D002C8514 /* glad.c in Sources */,

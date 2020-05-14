@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+int a008_helloCamera();
+
+int a008_superCamera();
 #endif /* a008_HelloCamera_hpp */
+
