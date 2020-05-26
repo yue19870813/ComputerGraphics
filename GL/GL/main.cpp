@@ -78,7 +78,7 @@ int main(int argc, char * argv[]) {
     // 007 旋转指定的箱子
 //    return a007_rotationWith3();
     // 008 摄像机
-//    return a008_helloCamera();
+    return a008_helloCamera();
     // 008 超级摄像机
 //    return a008_superCamera();
     
@@ -88,6 +88,6 @@ int main(int argc, char * argv[]) {
     // --------------------------------------------------------------
     
     // 001 第一个光源
-    return b001_helloLight();
+//    return b001_helloLight();
 }
 
