@@ -19,6 +19,7 @@
 // b. 光照系统
 #include "b001_HelloLight.hpp"
 #include "b002_BaseLight.hpp"
+#include "b002_BaseLightExercises.hpp"
 
 int main(int argc, char * argv[]) {
     
