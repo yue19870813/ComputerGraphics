@@ -17,4 +17,7 @@ int b002_baseLight();
 // 漫反射光照
 int b002_diffuseLight();
 
+// 镜面反射光照
+int b002_specularLight();
+
 #endif /* b002_BaseLight_hpp */
