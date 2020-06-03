@@ -18,6 +18,7 @@
 
 // b. 光照系统
 #include "b001_HelloLight.hpp"
+#include "b002_BaseLight.hpp"
 
 int main(int argc, char * argv[]) {
     
@@ -78,7 +79,7 @@ int main(int argc, char * argv[]) {
     // 007 旋转指定的箱子
 //    return a007_rotationWith3();
     // 008 摄像机
-    return a008_helloCamera();
+//    return a008_helloCamera();
     // 008 超级摄像机
 //    return a008_superCamera();
     
@@ -89,5 +90,9 @@ int main(int argc, char * argv[]) {
     
     // 001 第一个光源
 //    return b001_helloLight();
+    // 002 基础光照
+//    return b002_baseLight();
+    // 002 漫反射光照
+    return b002_diffuseLight();
 }
 

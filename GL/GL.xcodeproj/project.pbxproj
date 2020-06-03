@@ -28,6 +28,7 @@
 		8A4309AA246BE1F4002C8514 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309A8246BE1F4002C8514 /* common.cpp */; };
 		8A4309AC246C182A002C8514 /* camera.h in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309AB246C182A002C8514 /* camera.h */; };
 		8A4309B0246D67F7002C8514 /* b001_HelloLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4309AE246D67F7002C8514 /* b001_HelloLight.cpp */; };
+		8AA0A7812486449D000FF1DB /* b002_BaseLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8AA0A77F2486449D000FF1DB /* b002_BaseLight.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +81,8 @@
 		8A4309AB246C182A002C8514 /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		8A4309AE246D67F7002C8514 /* b001_HelloLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = b001_HelloLight.cpp; sourceTree = "<group>"; };
 		8A4309AF246D67F7002C8514 /* b001_HelloLight.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = b001_HelloLight.hpp; sourceTree = "<group>"; };
+		8AA0A77F2486449D000FF1DB /* b002_BaseLight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = b002_BaseLight.cpp; sourceTree = "<group>"; };
+		8AA0A7802486449D000FF1DB /* b002_BaseLight.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = b002_BaseLight.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 			children = (
 				8A4309AE246D67F7002C8514 /* b001_HelloLight.cpp */,
 				8A4309AF246D67F7002C8514 /* b001_HelloLight.hpp */,
+				8AA0A77F2486449D000FF1DB /* b002_BaseLight.cpp */,
+				8AA0A7802486449D000FF1DB /* b002_BaseLight.hpp */,
 			);
 			path = light;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A4309AC246C182A002C8514 /* camera.h in Sources */,
+				8AA0A7812486449D000FF1DB /* b002_BaseLight.cpp in Sources */,
 				8A4309AA246BE1F4002C8514 /* common.cpp in Sources */,
 				8A4309A0246A886A002C8514 /* a007_HelloCoordinate.cpp in Sources */,
 				8A43099224657EB6002C8514 /* a005_HelloTexture.cpp in Sources */,

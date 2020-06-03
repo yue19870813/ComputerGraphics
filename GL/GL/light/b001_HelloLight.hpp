@@ -11,6 +11,6 @@
 
 #include <stdio.h>
 
-//int b001_helloLight();
+int b001_helloLight();
 
 #endif /* b001_HelloLight_hpp */
