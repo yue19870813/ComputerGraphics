@@ -96,7 +96,9 @@ int main(int argc, char * argv[]) {
     // 002 漫反射光照
 //    return b002_diffuseLight();
     // 002 镜面反射
-    return b002_specularLight();
+//    return b002_specularLight();
+    // 002 练习题1: 旋转光源
+    return b002_moveLight();
     
 }
 
