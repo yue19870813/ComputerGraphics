@@ -98,7 +98,11 @@ int main(int argc, char * argv[]) {
     // 002 镜面反射
 //    return b002_specularLight();
     // 002 练习题1: 旋转光源
-    return b002_moveLight();
+//    return b002_moveLight();
+    // 002 练习题2: 观察空间（而不是世界空间）中计算冯氏光照
+    return b002_lightInViewport();
+    // 002 练习题3: Gouraud着色
+//    return b002_ligthByGourand();
     
 }
 
